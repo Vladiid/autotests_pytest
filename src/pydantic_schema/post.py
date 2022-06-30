@@ -6,7 +6,7 @@ class Post(BaseModel):
 
     @validator("bookingid")
     def check(cls, v):
-        if v > 2000:
+        if v > 4000:
             raise ValueError('Is not less than 2200')
         else:
             return v
