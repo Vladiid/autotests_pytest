@@ -11,7 +11,7 @@ def test_getting_posts():
     response = Response(r)
 
     response.assert_status_code(200).validate(Post)
-
+    print(response.response_json)
 
 def test_getting_posts2():
     r = requests.get(url=SERVICE_URL_R)
