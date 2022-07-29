@@ -16,9 +16,7 @@ class Player:
         self.result['balance'] = balance
         return self
 
-    def set_avatar(self, avatar="https://www.google.com.ua/search?q=avatar&sxsrf=ALiCzsbEZaoekWFm1XMMoUhqZNu4lAi7"
-                                "kw:1658948568541&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjvp4OB4Zn5AhWHvosKHZxkBAs"
-                                "Q_AUoAXoECAIQAw&biw=2327&bih=1172&dpr=1.1#imgrc=sh1dyb_R5yG2JM"):
+    def set_avatar(self, avatar="https://www.google.com.ua"):
         self.result['avatar'] = avatar
 
     def reset(self):
@@ -27,11 +25,13 @@ class Player:
         self.set_balance()
         self.result["localize"] = {
             "en": PlayerLocalization('en_US').build(),
-            "ru": PlayerLocalization('ru_RU').build()
+            "ru": PlayerLocalization('ru_RU').build(),
         }
+        return self
+
+    def update_inner_generator(self, key, generator):
+        self.result[key] = {"it": generator.build()}
         return self
 
     def build(self):
         return self.result
-
-
