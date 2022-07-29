@@ -1,3 +1,12 @@
-def test_something(get_number):
-    assert 1 == 1
-    print(get_number)
+import pytest
+
+
+@pytest.mark.parametrize("status", [
+    "ACTIVE",
+    "BANNED",
+    "DELETED",
+    "INACTIVE"
+    "NONE"
+])
+def test_something(status, get_player_generator):
+    print(get_player_generator.build())
