@@ -35,5 +35,3 @@ class Player:
         return self.result
 
 
-z = Player().build()
-print(z)
