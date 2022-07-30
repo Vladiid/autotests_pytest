@@ -31,3 +31,4 @@ def test_something3(get_player_generator):
         'localize', PlayerLocalization('it_IT').set_number(15)
     ).build()
     print(object_to_send)
+1
