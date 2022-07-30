@@ -1,5 +1,7 @@
 import pytest
 
+from src.generators.player_localization import PlayerLocalization
+
 
 @pytest.mark.parametrize("status", [
     "ACTIVE",
@@ -8,7 +10,6 @@ import pytest
     "INACTIVE"
     "NONE"
 ])
-
 def test_something1(status, get_player_generator):
     print(get_player_generator.set_status(status).build())
 
@@ -31,7 +32,7 @@ def test_something3(get_player_generator):
         'localize', PlayerLocalization('it_IT').set_number(15)
     ).build()
     print(object_to_send)
-=======
+
+
 def test_something(status, get_player_generator):
     print(get_player_generator.build())
-
