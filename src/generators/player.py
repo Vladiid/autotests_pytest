@@ -31,5 +31,9 @@ class Player:
         }
         return self
 
+    def update_inner_generator(self, key, generator):
+        self.result[key]={'en':generator.build()}
+        return self
+
     def build(self):
         return self.result
