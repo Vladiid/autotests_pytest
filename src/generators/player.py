@@ -35,4 +35,3 @@ class Player:
 
     def build(self):
         return self.result
-1
