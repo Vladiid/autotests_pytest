@@ -34,5 +34,5 @@ def test_something3(get_player_generator):
     print(object_to_send)
 
 
-def test_something(status, get_player_generator):
+def test_something(get_player_generator):
     print(get_player_generator.build())
